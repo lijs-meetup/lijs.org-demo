@@ -1,19 +1,16 @@
 import React from "react";
-import { Layout } from "../components/layout";
-import { SEO } from "../components/seo";
-import { Code } from "../components/code";
-import { Link } from "../components/link";
+import { Layout } from "../components/common/layout";
+import { SEO } from "../components/common/seo";
+// Sections
+import { CoverSection } from "../components/sections/cover-section";
 
-const App = () => (
-  <Layout>
-    <SEO />
-    <Code>
-      gatsby new my-app
-      https://github.com/gojutin/gatsby-starter-typescript-deluxe
-    </Code>
-
-    <Link to="/about">About</Link>
-  </Layout>
-);
+const App = () => {
+  return (
+    <Layout>
+      <SEO />
+      <CoverSection />
+    </Layout>
+  );
+};
 
 export default App;

@@ -40,6 +40,24 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     `gatsby-plugin-typescript`,
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`BenchNine`],
+        display: "swap",
+      },
+    },
+    {
+      resolve: `gatsby-source-meetup`,
+      options: {
+        groupUrlName: "long-island-javascript-group",
+        // Optional parameters for retrieving Events, see full documentation at
+        // https://www.meetup.com/meetup_api/docs/:urlname/events/?uri=%2Fmeetup_api%2Fdocs%2F%3Aurlname%2Fevents%2F#list
+        status: "upcoming",
+        desc: "true",
+        page: 10,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: siteTitle,
